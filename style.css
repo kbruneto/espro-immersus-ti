@@ -1,0 +1,223 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1c3654;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    background-color: #f2f2f3;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    color: #1c3654;
+    transform: translateY(-20px);
+    animation: slideDown 0.5s ease forwards;
+    margin: 0 15px; /* Espaço nas laterais */
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0); }
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #1c3654;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #1c3654;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1c3654;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #1c3654;
+    background-color: #fff;
+    text-align: center;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #1c3654;
+    color: #f2f2f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* Estilos para o pop-up */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 54, 84, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeInPopup 0.3s ease-in-out;
+}
+
+@keyframes fadeInPopup {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.popup-content {
+    background-color: #f2f2f3;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    color: #1c3654;
+    animation: popupContentAnimation 0.4s ease forwards;
+}
+
+@keyframes popupContentAnimation {
+    from { transform: translateY(-10px); }
+    to { transform: translateY(0); }
+}
+
+.popup-image {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1c3654;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.popup-content h2 {
+    color: #e12940; /* Título em vermelho */
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: bold; /* Título em negrito */
+}
+
+.popup-content p {
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 1.5;
+    font-weight: bold; /* Texto do pop-up em negrito */
+}
+
+/* Estilo para partes do texto em vermelho */
+.highlight-red {
+    color: #e12940; /* Cor vermelha */
+    font-weight: bold; /* Negrito */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+        margin: 0 10px; /* Menos margem lateral em tablets */
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+        margin: 0 5px; /* Margem lateral reduzida em celulares */
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .popup-content {
+        padding: 20px;
+    }
+
+    .popup-image {
+        max-width: 80px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+}

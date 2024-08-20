@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns! Você encontrou o prêmio!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="assets/logo-immersus.jpeg" alt="Logo Immersus" class="logo">
+        <h1>Você encontrou o tesouro!</h1>
+        <p>Preencha o formulário abaixo para receber seu prêmio.</p>
+        
+        <form id="premio-form">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+<!-- Pop-up de Alerta -->
+<div id="alerta" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <img src="assets/erro.png" alt="Erro" class="popup-image">
+        <h2>VOCÊ FOI HACKEADO!</h2>
+        <p>Poderia não ser uma pegadinha e simplesmente roubarem seus dados. <br> <br> <span class="highlight-red">Preste atenção!</span> <br> <br> Tome cuidado por onde está navegando e não confie em qualquer QR Code. <br> <br> <span class="highlight-red">Volte e olhe o link que você entrou.</span></p>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
